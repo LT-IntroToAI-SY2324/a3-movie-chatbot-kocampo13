@@ -75,15 +75,12 @@ def title_by_year_range(matches: List[str]) -> List[str]:
     Returns:
         a list of movie titles made during those years, inclusive (meaning if you pass
         in ["1991", "1994"] you will get movies made in 1991, 1992, 1993 & 1994)
-    """
-
-    # check!!
-    
+    """    
     result = []
     for movie in movie_db:
-        for int(matches[0]) <= get_year(movie)<= int(matches[1]):
+        if int(matches[0]) <= get_year(movie) <= int(matches[1]):
             result.append(get_title(movie))
-        return result
+    return result
 
 def title_before_year(matches: List[str]) -> List[str]:
     """Finds all movies made before the passed in year
@@ -241,8 +238,14 @@ def search_pa_list(src: List[str]) -> List[str]:
         a list of answers. Will be ["I don't understand"] if it finds no matches and
         ["No answers"] if it finds a match but no answers
     """
-    pass
+    for pat, act in pa_list:
+        mat = match(pat, src)
 
+        if mat is not None:
+            answer = act(mat)
+            return answer if answer else ["No answers"]
+
+    return ["I don't understand"]
 
 def query_loop() -> None:
     """The simple query loop. The try/except structure is to catch Ctrl-C or Ctrl-D
@@ -266,7 +269,7 @@ def query_loop() -> None:
 # uncomment the following line once you've written all of your code and are ready to try
 # it out. Before running the following line, you should make sure that your code passes
 # the existing asserts.
-# query_loop()
+query_loop()
 
 if __name__ == "__main__":
     assert isinstance(title_by_year(["1974"]), list), "title_by_year not returning a list"

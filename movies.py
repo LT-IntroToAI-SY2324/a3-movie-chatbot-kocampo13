@@ -434,5 +434,31 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "delroy lindo",
             "spike lee",
         ],
+    ),
+    (
+        "under the same moon",
+        "patricia riggen",
+        2007,
+        [
+            "adrian alonso barona"
+            "eugenio derbez"
+            "kate de castillo"
+            "america farrera"
+            "jesse garcia"
+            "carmen salinas"
+        ],
+    ),
+    (
+        "hereditary",
+        "ari aster",
+        2018,
+        [
+            "milly shapiro"
+            "toni collette"
+            "alex wolff"
+            "gabriel byrne"
+            "ann dowd"
+            "mallory bechtel"
+        ]
     )
 ]
