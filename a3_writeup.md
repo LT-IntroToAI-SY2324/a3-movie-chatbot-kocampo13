@@ -10,7 +10,7 @@ The search_pa_list function searches the database (a pattern) and helps match it
 I added the movie 'Hereditary' and it was made in the year 2018 as well as the movie 'Under the Same Moon" made in 2007. There is no specific reason why I added them but I remember watching the movie in theaters with my family. 
 
 3. What pattern / action did you add to the paList data structure?  Why do you think that is a useful pattern / action?
-The pattern action I added to the paList data structure was the.... This is a useful pattern because it narrows the gen 
+The pattern action I added to the paList data structure was the This is a useful pattern because it narrows the list for matching and is looking for something more specific. 
 
 4. What is chatbot would you create that would be like this?  Describe why you would create it and what it would do.
 A chatbot that I would create that would be like this is one that can identify horror games depending on the year it was made or the difficulty of the game. I would create it for people who like to know how hard a game is before playing it but also exploring how games have developed over the years. 

@@ -281,6 +281,7 @@ if __name__ == "__main__":
     assert isinstance(actors_by_title(["jaws"]), list), "actors_by_title not returning a list"
     assert isinstance(year_by_title(["jaws"]), list), "year_by_title not returning a list"
     assert isinstance(title_by_actor(["orson welles"]), list), "title_by_actor not returning a list"
+    assert isinstance(title_by_year(["2018"]), list), "title_by_year not returning list"
     
     assert sorted(title_by_year(["1974"])) == sorted(
         ["amarcord", "chinatown"]
@@ -325,5 +326,8 @@ if __name__ == "__main__":
     assert sorted(
         search_pa_list(["what", "movies", "were", "made", "in", "2020"])
     ) == sorted(["No answers"]), "failed search_pa_list test 3"
+    assert sorted(
+        search_pa_list(["what", "movies", "were", "made", "in", "2018"])
+    ) == sorted(["hereditary"]), "failed search_pa_list test 4"
 
     print("All tests passed!")
